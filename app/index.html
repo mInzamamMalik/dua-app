@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="main.css"/>
+
+    <script src="../bower_components/angular/angular.js"></script>
+
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+
+    <script src="main.js"></script>
+
+</head>
+<body ng-app="duaapp">
+
+<div>
+    <md-content class="md-padding">
+        <md-tabs md-dynamic-height md-border-bottom>
+
+            <md-tab label="Home" >
+                <md-content class="md-padding" ng-controller="home">
+                    <span class="md-display-3"> Dua App   </span>
+                    <p style="font-size:30px">
+
+                        اگر آپ چاحتے ھیں کے آپ کی دعا قبول ھو تو وھی دعا روسروں کے لۓ مانگنا شروع کر ديں
+
+                    </p>
+
+                </md-content>
+            </md-tab>
+
+
+
+            <md-tab label="Dua" >
+                <md-content class="md-padding" ng-controller="dua">
+                    <span class="md-display-3">Request for Dua</span> <span> To All peoples</span>
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                    <div layout layout-sm="column">
+                        <md-input-container flex="40">
+                            <label>Name</label>
+                            <input ng-model="user.firstName" maxlength="20" required>
+                        </md-input-container>
+
+                        <md-input-container flex="40">
+                            <label>Subject (optional)</label>
+                            <input ng-model="theMax" maxlength="20">
+                        </md-input-container>
+
+                    </div>
+
+                    <md-input-container>
+                        <label>Your Dua Here</label>
+                        <textarea></textarea>
+                    </md-input-container>
+
+                    <md-button md-no-ink class="md-primary" >
+                        Make Request
+                    </md-button>
+
+                    <p style="font-size: 10px;color: red ">your dua will be visible publicly</p>
+                    <p style="font-size: 10px">if you want to make it private kindly select "private dua"</p>
+
+
+                </md-content>
+            </md-tab>
+
+
+
+            <md-tab label="Private Dua" >
+                <md-content class="md-padding" ng-controller="pdua" >
+                    <span class="md-display-3">Request for Dua</span> <span> To Admin</span>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                    <div layout layout-sm="column">
+                        <md-input-container flex="40">
+                            <label>Name</label>
+                            <input ng-model="user.firstName" maxlength="20" required>
+                        </md-input-container>
+
+                        <md-input-container flex="40">
+                            <label>Subject (optional)</label>
+                            <input ng-model="theMax" maxlength="20">
+                        </md-input-container>
+
+                    </div>
+
+                    <md-input-container>
+                        <label>Your Dua Here</label>
+                        <textarea></textarea>
+                    </md-input-container>
+
+                    <md-button md-no-ink class="md-primary" >
+                        Send Request
+                    </md-button>
+
+                    <p style="font-size: 10px;color: red ">your dua will only visible to admin</p>
+                    <p style="font-size: 10px">if you want to make it private kindly select "dua" instead of "private dua"</p>
+
+
+                </md-content>
+            </md-tab>
+
+
+        </md-tabs>
+    </md-content>
+</div>
+
+<br />
+<br />
+<br />
+
+
+<p class="md-headline" >Public dua requests</p> <br />
+
+<md-list>
+
+<md-list-item class="md-3-line" <!--ng-repeat="item in messages"-- >
+    <div class="md-list-item-text">
+        <h3>exam {{item.what}}</h3>
+        <h4>Inzamam malik {{item.who}}</h4>
+        <p>kindly pray for my exam {{item.notes}}</p>
+        <md-switch><label>counter: 234</label></md-switch>
+    </div>
+    <md-divider ng-if="!$last"></md-divider>
+</md-list-item>
+
+</md-list>
+
+
+
+</body>
+</html>
