@@ -3,14 +3,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="main.css"/>
 
-    <script src="../bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
 
-    <script src="../bower_components/angular-animate/angular-animate.js"></script>
-    <script src="../bower_components/angular-aria/angular-aria.js"></script>
-    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
 
     <script src="main.js"></script>
 
@@ -23,8 +23,8 @@
 
             <md-tab label="Home" >
                 <md-content class="md-padding" ng-controller="home">
-                    <span class="md-display-3"> Dua App   </span>
-                    <p style="font-size:30px">
+                    <span class="md-display-3 light"> Dua App   </span>
+                    <p style="font-size:30px" class="light">
 
                         اگر آپ چاحتے ھیں کے آپ کی دعا قبول ھو تو وھی دعا روسروں کے لۓ مانگنا شروع کر ديں
 
@@ -37,7 +37,7 @@
 
             <md-tab label="Dua" >
                 <md-content class="md-padding" ng-controller="dua">
-                    <span class="md-display-3">Request for Dua</span> <span> To All peoples</span>
+                    <span class="md-display-3 light">Request for Dua</span> <span> To All peoples</span>
 
 
                     <br />
@@ -79,7 +79,7 @@
 
             <md-tab label="Private Dua" >
                 <md-content class="md-padding" ng-controller="pdua" >
-                    <span class="md-display-3">Request for Dua</span> <span> To Admin</span>
+                    <span class="md-display-3 light">Request for Dua</span> <span> To Hazrat Sahab</span>
 
                     <br />
                     <br />
@@ -130,7 +130,7 @@
 
 <md-list>
 
-<md-list-item class="md-3-line" <!--ng-repeat="item in messages"-- >
+<md-list-item class="md-3-line"  >
     <div class="md-list-item-text">
         <h3>exam {{item.what}}</h3>
         <h4>Inzamam malik {{item.who}}</h4>

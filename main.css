@@ -1,5 +1,10 @@
 *{
-    font-family: "segoe ui";
+    font-family: "segoe ui",serif;
+}
+
+.light{
+    font-family: "segoe ui light",serif;
+
 }
 
 
